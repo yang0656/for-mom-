@@ -1,0 +1,1309 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>妈妈，我想对你说 ❤️</title>
+
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+body{
+
+    overflow-x:hidden;
+
+    font-family:
+    "Microsoft YaHei",
+    "PingFang SC",
+    sans-serif;
+
+    background:#fff1df;
+
+}
+
+
+/* =================
+首页
+================= */
+
+
+.home{
+
+    height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:
+
+    radial-gradient(
+        circle at center,
+        #fff8ee,
+        #f6c7ae
+    );
+
+}
+
+
+
+.home-content{
+
+    z-index:2;
+
+    animation:fadeIn 2s;
+
+}
+
+
+
+.flower{
+
+    font-size:55px;
+
+    animation:float 3s infinite;
+
+}
+
+
+
+@keyframes float{
+
+    50%{
+
+        transform:translateY(-15px);
+
+    }
+
+}
+
+
+
+.home h1{
+
+    margin:30px 0;
+
+    font-size:52px;
+
+    letter-spacing:15px;
+
+    color:#914733;
+
+}
+
+
+
+.home p{
+
+    font-size:22px;
+
+    line-height:2;
+
+    color:#795548;
+
+}
+
+
+
+button{
+
+    border:none;
+
+    padding:16px 42px;
+
+    margin-top:45px;
+
+    border-radius:50px;
+
+    background:
+
+    linear-gradient(
+        135deg,
+        #dc8c70,
+        #c9624c
+    );
+
+    color:white;
+
+    font-size:18px;
+
+    box-shadow:
+
+    0 15px 35px rgba(0,0,0,.2);
+
+}
+
+
+
+/* =================
+花瓣
+================= */
+
+
+.petal{
+
+    position:fixed;
+
+    top:-40px;
+
+    width:18px;
+
+    height:18px;
+
+    background:#ffd0dc;
+
+    border-radius:
+
+    20px 0 20px 0;
+
+    opacity:.8;
+
+    animation:fall linear infinite;
+
+    z-index:10;
+
+}
+
+
+
+@keyframes fall{
+
+
+from{
+
+transform:
+
+translateY(-50px)
+
+rotate(0deg);
+
+}
+
+
+to{
+
+transform:
+
+translateY(110vh)
+
+rotate(360deg);
+
+}
+
+
+}
+
+
+
+/* =================
+信封
+================= */
+
+
+.envelope-page{
+
+    display:none;
+
+    height:100vh;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-direction:column;
+
+    background:
+
+    linear-gradient(
+        180deg,
+        #ffe5d5,
+        #fff8ef
+    );
+
+}
+
+
+
+.envelope{
+
+    width:300px;
+
+    height:190px;
+
+    background:#f5c4b0;
+
+    position:relative;
+
+    border-radius:10px;
+
+    box-shadow:
+
+    0 25px 50px rgba(0,0,0,.2);
+
+    animation:float 3s infinite;
+
+}
+
+
+
+.envelope::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    border-left:
+
+    150px solid transparent;
+
+    border-right:
+
+    150px solid transparent;
+
+    border-top:
+
+    110px solid #e8a18a;
+
+}
+
+
+
+.envelope-text{
+
+    position:absolute;
+
+    bottom:25px;
+
+    width:100%;
+
+    text-align:center;
+
+    color:#7c4030;
+
+    font-size:20px;
+
+}
+
+
+
+/* =================
+信
+================= */
+
+
+.letter-page{
+
+    display:none;
+
+    min-height:100vh;
+
+    padding:40px 20px;
+
+    background:
+
+    linear-gradient(
+        180deg,
+        #fff0df,
+        #f7d1bd
+    );
+
+}
+
+
+
+.paper{
+
+    max-width:520px;
+
+    margin:auto;
+
+    background:#fffdf7;
+
+    padding:40px 30px;
+
+    border-radius:15px;
+
+    box-shadow:
+
+    0 20px 50px rgba(0,0,0,.15);
+
+    animation:paperIn 1.2s;
+
+}
+
+
+
+@keyframes paperIn{
+
+
+from{
+
+opacity:0;
+
+transform:
+
+translateY(80px);
+
+}
+
+
+to{
+
+opacity:1;
+
+transform:
+
+translateY(0);
+
+}
+
+
+}
+
+
+
+.paper h2{
+
+    color:#8b4513;
+
+    margin-bottom:35px;
+
+}
+
+
+
+.letter-text{
+
+    font-size:19px;
+
+    line-height:2.2;
+
+    color:#555;
+
+}
+
+
+
+.big-love{
+
+    display:block;
+
+    font-size:38px;
+
+    color:#d14b5a;
+
+    font-weight:bold;
+
+    margin:20px 0;
+
+}
+
+
+
+.signature{
+
+    text-align:right;
+
+    margin-top:35px;
+
+    font-size:22px;
+
+    color:#9b4b35;
+
+}
+
+
+
+
+
+/* =================
+彩蛋 / 烟花页面
+================= */
+
+
+.secret-page{
+
+    display:none;
+
+    height:100vh;
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:
+
+    radial-gradient(
+        circle at center,
+        #18244d,
+        #050713
+    );
+
+    color:white;
+
+    text-align:center;
+
+}
+
+
+
+.secret-content{
+
+    position:absolute;
+
+    top:50%;
+
+    left:50%;
+
+    transform:
+
+    translate(-50%,-50%);
+
+    z-index:5;
+
+    width:90%;
+
+}
+
+
+
+.secret-content h2{
+
+    font-size:42px;
+
+    margin-bottom:30px;
+
+}
+
+
+
+.secret-content p{
+
+    font-size:22px;
+
+    line-height:2;
+
+}
+
+
+
+.egg{
+
+    font-size:90px;
+
+    margin-bottom:20px;
+
+    animation:
+
+    eggFloat 2s infinite;
+
+}
+
+
+
+@keyframes eggFloat{
+
+
+50%{
+
+transform:
+
+translateY(-20px);
+
+}
+
+
+}
+
+
+
+.wish{
+
+    color:#ffe5a0;
+
+    font-size:28px!important;
+
+}
+
+
+
+.final-love{
+
+    margin-top:35px;
+
+    font-size:45px;
+
+    animation:
+
+    pulse 1.5s infinite;
+
+}
+
+
+
+@keyframes pulse{
+
+
+50%{
+
+transform:
+
+scale(1.3);
+
+}
+
+
+}
+
+
+
+
+/* 烟花画布 */
+
+
+#fireworks{
+
+    position:absolute;
+
+    left:0;
+
+    top:0;
+
+    width:100%;
+
+    height:100%;
+
+    z-index:1;
+
+}
+
+
+
+/* 手机适配 */
+
+
+@media(max-width:600px){
+
+
+.home h1{
+
+    font-size:42px;
+
+}
+
+
+.home p{
+
+    font-size:19px;
+
+}
+
+
+.paper{
+
+    padding:30px 22px;
+
+}
+
+
+
+.letter-text{
+
+    font-size:17px;
+
+}
+
+
+
+.big-love{
+
+    font-size:32px;
+
+}
+
+
+
+.secret-content h2{
+
+    font-size:36px;
+
+}
+
+
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- 首页 -->
+
+<section class="home" id="home">
+
+
+<div class="home-content">
+
+
+<div class="flower">
+🌷
+</div>
+
+
+<h1>
+妈妈
+</h1>
+
+
+<p>
+有些话，<br>
+我一直想告诉你。<br><br>
+
+今天，<br>
+想认真说给你听。
+</p>
+
+
+
+<button onclick="showEnvelope()">
+
+💌 打开这份礼物
+
+</button>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<!-- 信封 -->
+
+
+<section class="envelope-page" id="envelopePage">
+
+
+<div class="envelope">
+
+
+<div class="envelope-text">
+
+给妈妈的一封信<br>
+—— 杨杨
+
+</div>
+
+
+</div>
+
+
+<button onclick="openLetter()">
+
+打开信封
+
+</button>
+
+
+</section>
+
+
+
+
+
+<!-- 信 -->
+
+
+<section class="letter-page" id="letterPage">
+
+
+<div class="paper">
+
+
+<h2>
+亲爱的妈妈：
+</h2>
+
+
+<div class="letter-text">
+
+
+谢谢你陪我长大，<br>
+
+谢谢你一直站在我的身后。<br><br>
+
+
+可能我平时不太会表达，<br>
+
+但我想告诉你：<br><br>
+
+
+<span class="big-love">
+
+妈妈，<br>
+我爱你。
+
+</span>
+
+
+以后换我陪你，<br>
+
+换我照顾你。<br><br>
+
+
+<div class="signature">
+
+永远爱你的杨杨 ❤️
+
+</div>
+
+
+</div>
+
+
+
+<button onclick="showSecret()">
+
+还有一个小愿望
+
+</button>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+<!-- 彩蛋烟花 -->
+
+
+<section class="secret-page" id="secretPage">
+
+
+<canvas id="fireworks"></canvas>
+
+
+
+<div class="secret-content">
+
+
+<div class="egg">
+
+🥚
+
+</div>
+
+
+<h2>
+妈妈
+</h2>
+
+
+<p>
+还有一个小愿望...
+</p>
+
+
+<p class="wish">
+
+祝你的过敏痊愈，
+
+<br><br>
+
+以后可以放心吃鸡蛋🥚
+
+<br><br>
+
+想吃几个吃几个！
+
+</p>
+
+
+<p>
+
+希望你身体健康，<br>
+
+每天都有好多开心的事情。
+
+</p>
+
+
+<div class="final-love">
+
+❤️
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+<script>
+
+
+// 花瓣
+
+
+for(let i=0;i<45;i++){
+
+
+let p=document.createElement("div");
+
+p.className="petal";
+
+
+p.style.left=
+Math.random()*100+"%";
+
+
+p.style.animationDuration=
+(5+Math.random()*6)+"s";
+
+
+p.style.animationDelay=
+Math.random()*5+"s";
+
+
+document.body.appendChild(p);
+
+
+}
+
+
+
+
+
+function showEnvelope(){
+
+
+document.getElementById("home")
+.style.display="none";
+
+
+document.getElementById("envelopePage")
+.style.display="flex";
+
+
+}
+
+
+
+
+function openLetter(){
+
+
+document.getElementById("envelopePage")
+.style.display="none";
+
+
+document.getElementById("letterPage")
+.style.display="block";
+
+
+}
+
+
+
+
+function showSecret(){
+
+
+document.getElementById("letterPage")
+.style.display="none";
+
+
+document.getElementById("secretPage")
+.style.display="block";
+
+
+startFireworks();
+
+
+}
+
+
+
+
+
+
+
+/* ===========================
+超级烟花系统
+=========================== */
+
+
+const canvas=
+document.getElementById("fireworks");
+
+
+const ctx=
+canvas.getContext("2d");
+
+
+function resize(){
+
+canvas.width=
+window.innerWidth;
+
+canvas.height=
+window.innerHeight;
+
+}
+
+
+resize();
+
+
+window.onresize=resize;
+
+
+
+let rockets=[];
+
+let particles=[];
+
+
+
+class Rocket{
+
+
+constructor(){
+
+this.x=
+Math.random()*canvas.width;
+
+
+this.y=
+canvas.height;
+
+
+this.target=
+Math.random()*canvas.height*0.35+80;
+
+
+this.speed=
+Math.random()*3+5;
+
+
+this.color=
+`hsl(${Math.random()*360},100%,60%)`;
+
+
+}
+
+
+update(){
+
+
+this.y-=this.speed;
+
+
+if(this.y<=this.target){
+
+explode(this.x,this.y,this.color);
+
+return false;
+
+}
+
+
+return true;
+
+
+}
+
+
+
+draw(){
+
+ctx.beginPath();
+
+ctx.arc(
+this.x,
+this.y,
+3,
+0,
+Math.PI*2
+);
+
+
+ctx.fillStyle=this.color;
+
+ctx.fill();
+
+
+}
+
+
+
+}
+
+
+
+
+class Particle{
+
+
+constructor(x,y,color){
+
+
+this.x=x;
+
+this.y=y;
+
+
+this.angle=
+Math.random()*Math.PI*2;
+
+
+this.speed=
+Math.random()*7+2;
+
+
+this.life=100;
+
+
+this.color=color;
+
+
+}
+
+
+update(){
+
+
+this.x+=
+Math.cos(this.angle)*this.speed;
+
+
+this.y+=
+Math.sin(this.angle)*this.speed;
+
+
+this.speed*=0.96;
+
+
+this.life--;
+
+
+}
+
+
+
+draw(){
+
+
+ctx.globalAlpha=
+this.life/100;
+
+
+ctx.beginPath();
+
+ctx.arc(
+this.x,
+this.y,
+2,
+0,
+Math.PI*2
+);
+
+
+ctx.fillStyle=this.color;
+
+ctx.fill();
+
+
+ctx.globalAlpha=1;
+
+
+}
+
+
+}
+
+
+
+
+
+function explode(x,y,color){
+
+
+for(let i=0;i<120;i++){
+
+
+particles.push(
+
+new Particle(
+x,
+y,
+color
+)
+
+);
+
+
+}
+
+
+}
+
+
+
+
+function launch(){
+
+
+rockets.push(
+new Rocket()
+);
+
+
+}
+
+
+
+
+
+function animate(){
+
+
+ctx.fillStyle=
+"rgba(5,7,19,0.25)";
+
+
+ctx.fillRect(
+0,
+0,
+canvas.width,
+canvas.height
+);
+
+
+
+rockets=
+rockets.filter(r=>{
+
+
+r.update();
+
+r.draw();
+
+return r.y>0;
+
+
+});
+
+
+
+particles=
+particles.filter(p=>{
+
+
+p.update();
+
+p.draw();
+
+
+return p.life>0;
+
+
+});
+
+
+
+requestAnimationFrame(animate);
+
+
+}
+
+
+
+
+function startFireworks(){
+
+
+animate();
+
+
+// 连续发射
+
+
+setInterval(()=>{
+
+
+launch();
+
+
+},350);
+
+
+
+// 开始先连续多发
+
+
+for(let i=0;i<8;i++){
+
+
+setTimeout(()=>{
+
+launch();
+
+},i*200);
+
+
+}
+
+
+
+}
+
+
+
+</script>
+
+
+
+</body>
+
+</html>
